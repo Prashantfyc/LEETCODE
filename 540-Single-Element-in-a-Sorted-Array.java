@@ -8,17 +8,17 @@ class Solution {
 
             int mid = low + (high - low) / 2;
 
-            // Make mid even
+            // Pair ki starting position even honi chahiye
             if (mid % 2 == 1) {
                 mid--;
             }
 
-            // Correct pair
+            // Proper pair → single RIGHT
             if (nums[mid] == nums[mid + 1]) {
                 low = mid + 2;
             }
 
-            // Pair broken
+            // Pair broken → single LEFT or mid
             else {
                 high = mid;
             }
